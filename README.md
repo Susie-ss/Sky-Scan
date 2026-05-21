@@ -1,4 +1,4 @@
-# ☁️ Sky Scan
+# ☁️ Sky Scan 数据采集插件
 
 > A universal Chrome extension for scraping web data — tables, articles, and beyond.
 
