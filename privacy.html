@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sky Scan Privacy Policy</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.7; color: #333; background: #f8f9fb;
+    padding: 40px 20px;
+  }
+  .container { max-width: 760px; margin: 0 auto; background: #fff;
+    border-radius: 12px; padding: 40px 50px; box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+  .header { text-align: center; margin-bottom: 32px; padding-bottom: 24px;
+    border-bottom: 2px solid #f0f0f0; }
+  .header h1 {
+    font-size: 28px; background: linear-gradient(135deg, #ff6b35, #f7c948);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header .subtitle { font-size: 14px; color: #888; margin-top: 8px; }
+  .header .meta { font-size: 12px; color: #aaa; margin-top: 12px; }
+  h2 {
+    font-size: 19px; color: #ff6b35; margin: 32px 0 12px;
+    padding-left: 12px; border-left: 4px solid #ff6b35;
+  }
+  h3 { font-size: 15px; color: #444; margin: 18px 0 8px; }
+  p { margin: 10px 0; font-size: 14px; }
+  ul { margin: 10px 0 10px 24px; }
+  li { margin: 6px 0; font-size: 14px; }
+  .callout {
+    background: #fff8e8; border-left: 4px solid #f7c948;
+    padding: 14px 18px; margin: 20px 0; border-radius: 4px;
+    font-size: 14px;
+  }
+  .callout strong { color: #c88800; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0;
+    font-size: 13px; }
+  th, td { border: 1px solid #e0e3e8; padding: 8px 12px; text-align: left; }
+  th { background: #fafbfc; color: #555; font-weight: 600; }
+  td code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px;
+    font-size: 12px; color: #c0392b; }
+  .lang-toggle {
+    text-align: center; margin-bottom: 24px;
+  }
+  .lang-toggle button {
+    padding: 6px 18px; margin: 0 4px; border: 1px solid #d0d7de;
+    background: #fff; border-radius: 4px; cursor: pointer; font-size: 13px;
+    color: #666;
+  }
+  .lang-toggle button.active {
+    background: #ff6b35; color: #fff; border-color: #ff6b35;
+  }
+  .footer { text-align: center; margin-top: 32px; padding-top: 20px;
+    border-top: 1px solid #f0f0f0; font-size: 12px; color: #aaa; }
+  .footer a { color: #ff6b35; text-decoration: none; }
+  [data-lang="en"] { display: none; }
+  body.show-en [data-lang="zh"] { display: none; }
+  body.show-en [data-lang="en"] { display: block; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>☁️ Sky Scan · 隐私政策</h1>
+    <div class="subtitle">Privacy Policy</div>
+    <div class="meta">最后更新 / Last updated: 2026-08-20 · Version 2.2.0</div>
+  </div>
+
+  <div class="lang-toggle">
+    <button id="btnZh" class="active" onclick="setLang('zh')">中文</button>
+    <button id="btnEn" onclick="setLang('en')">English</button>
+  </div>
+
+  <div class="callout" data-lang="zh">
+    <strong>📌 一句话总结：</strong>Sky Scan 完全在本地运行，<u>不收集、不上传、不存储</u>你的任何个人数据。
+  </div>
+  <div class="callout" data-lang="en">
+    <strong>📌 In one sentence:</strong>Sky Scan runs entirely on your device. It <u>does not collect, upload, or store</u> any of your personal data.
+  </div>
+
+  <!-- ==================== 中文版 ==================== -->
+  <div data-lang="zh">
+    <h2>1. 数据处理原则</h2>
+    <p>Sky Scan 是一款浏览器扩展，所有功能<strong>完全在用户的浏览器中本地运行</strong>。我们采用"本地优先"原则：</p>
+    <ul>
+      <li>✅ 不搭建任何后端服务器</li>
+      <li>✅ 不收集任何个人信息</li>
+      <li>✅ 不使用分析、埋点、追踪 SDK</li>
+      <li>✅ 不向任何第三方服务发送数据</li>
+      <li>✅ 不在浏览器外存储数据</li>
+    </ul>
+
+    <h2>2. 权限说明</h2>
+    <p>扩展声明的每个权限都仅用于完成核心功能，无任何隐藏用途：</p>
+    <table>
+      <tr><th>权限</th><th>用途</th><th>是否传输数据</th></tr>
+      <tr><td><code>activeTab</code></td><td>仅在用户主动点击扩展图标时，访问当前激活标签页的 DOM 用于检测表格/文章</td><td>否</td></tr>
+      <tr><td><code>scripting</code></td><td>将检测与采集函数注入当前标签页执行</td><td>否</td></tr>
+      <tr><td><code>downloads</code></td><td>触发浏览器原生下载，将 CSV / JSON / DOCX 文件保存到用户的下载目录</td><td>否</td></tr>
+      <tr><td><code>storage</code></td><td>在 popup 会话之间临时保存已采集数据，仅存于浏览器本地</td><td>否</td></tr>
+      <tr><td><code>tabs</code></td><td>查询当前激活标签页的 URL 与标题（不读取历史）</td><td>否</td></tr>
+      <tr><td><code>&lt;all_urls&gt;</code></td><td>允许在任意域名工作（企业内网 / SaaS 后台 / 自定义域名），因为 Sky Scan 是通用采集工具</td><td>否</td></tr>
+    </table>
+
+    <h2>3. 关于登录态</h2>
+    <p>Sky Scan <strong>不请求、不存储、不读取</strong>任何账号密码。当你在已登录的网站（如后台管理系统）使用本扩展时：</p>
+    <ul>
+      <li>扩展只读取页面上已渲染的 DOM 元素（表格单元格、文章正文）</li>
+      <li>不会主动发起任何 HTTP 请求复用你的 cookie</li>
+      <li>不会修改页面请求头或注入任何脚本到外部域名</li>
+      <li>所有数据流向：网页 → 浏览器内存 → 用户主动下载的文件</li>
+    </ul>
+
+    <h2>4. 数据存储位置</h2>
+    <h3>4.1 浏览器本地存储（chrome.storage.local）</h3>
+    <p>采集过程中的临时数据保存在 <code>chrome.storage.local</code>，该存储：</p>
+    <ul>
+      <li>仅存于本机浏览器配置文件中</li>
+      <li>不与 Chrome 账号同步（与 <code>storage.sync</code> 不同）</li>
+      <li>用户可在 <code>chrome://extensions</code> → Sky Scan → "清除存储数据" 一键清除</li>
+      <li>卸载扩展时自动清除</li>
+    </ul>
+
+    <h3>4.2 用户下载的文件</h3>
+    <p>导出的 CSV / JSON / DOCX 文件由用户主动触发下载，保存位置由浏览器下载设置决定（默认为"下载"文件夹）。这些文件归用户所有，扩展不再访问。</p>
+
+    <h2>5. 第三方代码</h2>
+    <p>项目内嵌以下开源第三方库（仅作为静态文件离线运行，不联网）：</p>
+    <table>
+      <tr><th>库</th><th>版本</th><th>用途</th><th>许可</th></tr>
+      <tr><td>JSZip</td><td>3.10.1</td><td>生成 .docx 文件（ZIP 打包）</td><td>MIT</td></tr>
+    </table>
+    <p>JSZip 完全在浏览器内运行，不发起任何网络请求。</p>
+
+    <h2>6. 不做的事项</h2>
+    <ul>
+      <li>❌ 不收集你的浏览历史</li>
+      <li>❌ 不收集你访问的 URL 列表</li>
+      <li>❌ 不读取或上传 cookie</li>
+      <li>❌ 不安装任何追踪像素 / 埋点</li>
+      <li>❌ 不与任何广告联盟共享数据</li>
+      <li>❌ 不读取你浏览器外的任何文件</li>
+      <li>❌ 不请求 microphone / camera / location 等敏感权限</li>
+    </ul>
+
+    <h2>7. 儿童隐私</h2>
+    <p>Sky Scan 不针对 13 岁以下儿童，也不主动收集任何年龄段用户的信息。</p>
+
+    <h2>8. 政策变更</h2>
+    <p>如本政策有更新，将通过 GitHub 仓库的 README 与本页面同步公布，并更新顶部"最后更新"日期。</p>
+
+    <h2>9. 联系方式</h2>
+    <p>如对隐私政策有疑问，可通过以下方式联系：</p>
+    <ul>
+      <li>GitHub Issues：<a href="https://github.com/Susie-ss/Sky-Scan/issues" target="_blank">github.com/Susie-ss/Sky-Scan/issues</a></li>
+      <li>本政策页面：<a href="https://github.com/Susie-ss/Sky-Scan/blob/main/privacy.html" target="_blank">privacy.html</a></li>
+    </ul>
+  </div>
+
+  <!-- ==================== English ==================== -->
+  <div data-lang="en">
+    <h2>1. Data Processing Principles</h2>
+    <p>Sky Scan is a browser extension that runs <strong>entirely on the user's device</strong>. We follow a "local-first" principle:</p>
+    <ul>
+      <li>✅ No backend server of any kind</li>
+      <li>✅ No personal information collected</li>
+      <li>✅ No analytics, tracking, or telemetry SDKs</li>
+      <li>✅ No data sent to any third-party service</li>
+      <li>✅ No data stored outside the browser</li>
+    </ul>
+
+    <h2>2. Permission Justifications</h2>
+    <p>Every permission declared by the extension is used solely for its core functionality:</p>
+    <table>
+      <tr><th>Permission</th><th>Purpose</th><th>Transmits Data?</th></tr>
+      <tr><td><code>activeTab</code></td><td>Access the current active tab's DOM only when the user clicks the extension icon, to detect tables/articles</td><td>No</td></tr>
+      <tr><td><code>scripting</code></td><td>Inject detection and scraping functions into the active tab</td><td>No</td></tr>
+      <tr><td><code>downloads</code></td><td>Trigger native browser downloads to save CSV / JSON / DOCX files to the user's downloads folder</td><td>No</td></tr>
+      <tr><td><code>storage</code></td><td>Temporarily persist collected data between popup sessions, local only</td><td>No</td></tr>
+      <tr><td><code>tabs</code></td><td>Query the current active tab's URL and title (no history access)</td><td>No</td></tr>
+      <tr><td><code>&lt;all_urls&gt;</code></td><td>Allow scraping on any domain (enterprise intranets, SaaS dashboards, custom subdomains), since Sky Scan is a universal scraping tool</td><td>No</td></tr>
+    </table>
+
+    <h2>3. About Login State</h2>
+    <p>Sky Scan <strong>does not request, store, or read</strong> any account credentials. When you use the extension on a logged-in website:</p>
+    <ul>
+      <li>The extension only reads DOM elements already rendered on the page (table cells, article body)</li>
+      <li>It does not initiate any HTTP requests to reuse your cookies</li>
+      <li>It does not modify page request headers or inject scripts into external domains</li>
+      <li>Data flow: webpage → browser memory → user-initiated download file</li>
+    </ul>
+
+    <h2>4. Data Storage Locations</h2>
+    <h3>4.1 Browser Local Storage (chrome.storage.local)</h3>
+    <p>Temporary data during scraping is saved in <code>chrome.storage.local</code>, which:</p>
+    <ul>
+      <li>Exists only in the local browser profile</li>
+      <li>Does NOT sync with your Chrome account (unlike <code>storage.sync</code>)</li>
+      <li>Can be cleared via <code>chrome://extensions</code> → Sky Scan → "Clear storage data"</li>
+      <li>Is automatically cleared when the extension is uninstalled</li>
+    </ul>
+
+    <h3>4.2 User-Downloaded Files</h3>
+    <p>Exported CSV / JSON / DOCX files are downloaded on user-initiated action. The save location is determined by your browser's download settings (default: "Downloads" folder). These files belong to the user; the extension does not access them afterward.</p>
+
+    <h2>5. Third-Party Code</h2>
+    <p>The extension bundles the following open-source library as a static offline file (no network calls):</p>
+    <table>
+      <tr><th>Library</th><th>Version</th><th>Purpose</th><th>License</th></tr>
+      <tr><td>JSZip</td><td>3.10.1</td><td>Generate .docx files (ZIP packaging)</td><td>MIT</td></tr>
+    </table>
+    <p>JSZip runs entirely in the browser and makes no network requests.</p>
+
+    <h2>6. What We Don't Do</h2>
+    <ul>
+      <li>❌ Do not collect your browsing history</li>
+      <li>❌ Do not collect the list of URLs you visit</li>
+      <li>❌ Do not read or upload cookies</li>
+      <li>❌ Do not install tracking pixels or analytics</li>
+      <li>❌ Do not share data with any ad network</li>
+      <li>❌ Do not read files outside your browser</li>
+      <li>❌ Do not request microphone / camera / location permissions</li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+    <p>Sky Scan is not directed at children under 13, and we do not knowingly collect information from any age group.</p>
+
+    <h2>8. Policy Changes</h2>
+    <p>Any updates to this policy will be published via the GitHub repository's README and this page, with the "Last updated" date refreshed accordingly.</p>
+
+    <h2>9. Contact</h2>
+    <p>For privacy-related questions, reach out via:</p>
+    <ul>
+      <li>GitHub Issues: <a href="https://github.com/Susie-ss/Sky-Scan/issues" target="_blank">github.com/Susie-ss/Sky-Scan/issues</a></li>
+      <li>This policy page: <a href="https://github.com/Susie-ss/Sky-Scan/blob/main/privacy.html" target="_blank">privacy.html</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    © 2026 Susie-ss · <a href="https://github.com/Susie-ss/Sky-Scan">github.com/Susie-ss/Sky-Scan</a> · MIT License
+  </div>
+</div>
+
+<script>
+  function setLang(lang) {
+    const body = document.body;
+    if (lang === 'en') {
+      body.classList.add('show-en');
+      document.getElementById('btnEn').classList.add('active');
+      document.getElementById('btnZh').classList.remove('active');
+    } else {
+      body.classList.remove('show-en');
+      document.getElementById('btnZh').classList.add('active');
+      document.getElementById('btnEn').classList.remove('active');
+    }
+  }
+</script>
+</body>
+</html>
